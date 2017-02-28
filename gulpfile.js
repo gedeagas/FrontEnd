@@ -30,4 +30,10 @@ gulp.task('develop', ['sass-compile', 'template-compile'], function(){
 	gulp.watch('./src/**/*.html', ['template-compile'])
 	gulp.watch('./src/**/*.sass', ['sass-compile'])
 
+	browserSync.init({
+			 server: {
+					 baseDir: './dist/assets'
+			 }
+	 });
+
 });
